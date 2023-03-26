@@ -81,6 +81,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminClientsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminClientsPage.Designer.cs">
+      <DependentUpon>AdminClientsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminContactPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminContactPage.Designer.cs">
+      <DependentUpon>AdminContactPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCreateVisitPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCreateVisitPage.Designer.cs">
+      <DependentUpon>AdminCreateVisitPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminEditProfilePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminEditProfilePage.Designer.cs">
+      <DependentUpon>AdminEditProfilePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMainPage.Designer.cs">
+      <DependentUpon>AdminMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMyProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMyProfile.Designer.cs">
+      <DependentUpon>AdminMyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminServicesPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminServicesPage.Designer.cs">
+      <DependentUpon>AdminServicesPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminStorePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminStorePage.Designer.cs">
+      <DependentUpon>AdminStorePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTeamPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTeamPage.Designer.cs">
+      <DependentUpon>AdminTeamPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminVisitsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminVisitsPage.Designer.cs">
+      <DependentUpon>AdminVisitsPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="ContactPage.cs">
       <SubType>Form</SubType>
@@ -144,6 +204,36 @@
     <Compile Include="TeamPage.Designer.cs">
       <DependentUpon>TeamPage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminClientsPage.resx">
+      <DependentUpon>AdminClientsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminContactPage.resx">
+      <DependentUpon>AdminContactPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCreateVisitPage.resx">
+      <DependentUpon>AdminCreateVisitPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminEditProfilePage.resx">
+      <DependentUpon>AdminEditProfilePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMainPage.resx">
+      <DependentUpon>AdminMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMyProfile.resx">
+      <DependentUpon>AdminMyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminServicesPage.resx">
+      <DependentUpon>AdminServicesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminStorePage.resx">
+      <DependentUpon>AdminStorePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTeamPage.resx">
+      <DependentUpon>AdminTeamPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminVisitsPage.resx">
+      <DependentUpon>AdminVisitsPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ContactPage.resx">
       <DependentUpon>ContactPage.cs</DependentUpon>
     </EmbeddedResource>

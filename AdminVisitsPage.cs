@@ -1,25 +1,24 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BarberShop
 {
-    public partial class MyVisitsPage : Form
+    public partial class AdminVisitsPage : Form
     {
         User userr = null;
-        public MyVisitsPage(User user)
+        public AdminVisitsPage(User user)
         {
             InitializeComponent();
-            button9.Text = "Profil: " + user.login;
+            button9.Text = user.name;
+            userr = user;
             int id_user = user.id;
             userr = user;
             string connectionString = "server=localhost;database=barbershop;username=root;password=;";
@@ -30,8 +29,8 @@ namespace BarberShop
             MySqlCommand commandGetUserId = new MySqlCommand(sqlQueryGetUserId, connection);
             int UserId = Convert.ToInt32(commandGetUserId.ExecuteScalar());
 
-            MySqlCommand cmdDataBase = new MySqlCommand("SELECT visits.id AS 'ID WIZYTY', visits.date AS 'DATA', barber.name AS 'BARBER', service.name AS 'USŁUGA' FROM visits, barber, service WHERE user= " + UserId + " AND visits.barber = barber.id AND visits.service = service.id  ORDER BY date ASC", connection);
-            MySqlCommand cmdDataBase1 = new MySqlCommand("SELECT id FROM visits WHERE user= " + id_user + "  ORDER BY id ASC", connection);
+            MySqlCommand cmdDataBase = new MySqlCommand("SELECT DISTINCT visits.id AS 'ID WIZYTY', visits.date AS 'DATA', users.surname AS 'KLIENT', barber.name AS 'BARBER', service.name AS 'USŁUGA' FROM visits, users, barber, service WHERE user IS NOT NULL AND visits.user = users.id AND visits.barber = barber.id AND visits.service = service.id ORDER BY date ASC", connection);
+            MySqlCommand cmdDataBase1 = new MySqlCommand("SELECT id FROM visits WHERE user IS NOT NULL ORDER BY id ASC", connection);
             try
             {
                 //DATAGRIDVIEW
@@ -61,50 +60,50 @@ namespace BarberShop
             }
         }
 
-        private void MyVisitsPage_Load(object sender, EventArgs e)
+        private void AdminVisitsPage_Load(object sender, EventArgs e)
         {
 
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            MyProfilePage myprofilepage = new MyProfilePage(userr);
-            myprofilepage.Show();
+            AdminMyProfile adminmyprofile = new AdminMyProfile(userr);
+            adminmyprofile.Show();
             this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ContactPage contactpage = new ContactPage(userr);
-            contactpage.Show();
+            AdminContactPage ddmincontactpage = new AdminContactPage(userr);
+            ddmincontactpage.Show();
             this.Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            TeamPage teampage = new TeamPage(userr);
-            teampage.Show();
+            AdminTeamPage adminteampage = new AdminTeamPage(userr);
+            adminteampage.Show();
             this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            ServicesPage servicespage = new ServicesPage(userr);
-            servicespage.Show();
+            AdminServicesPage adminservicespage = new AdminServicesPage(userr);
+            adminservicespage.Show();
             this.Hide();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            MainPage mainpage = new MainPage(userr);
-            mainpage.Show();
+            AdminMainPage adminmainpage = new AdminMainPage(userr);
+            adminmainpage.Show();
             this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CreateVisitPage createvisitpage = new CreateVisitPage(userr);
-            createvisitpage.Show();
+            AdminCreateVisitPage admincreatevisitpage = new AdminCreateVisitPage(userr);
+            admincreatevisitpage.Show();
             this.Hide();
         }
 
@@ -113,10 +112,24 @@ namespace BarberShop
 
         }
 
+        private void button11_Click(object sender, EventArgs e)
+        {
+            AdminClientsPage adminclientspage = new AdminClientsPage(userr);
+            adminclientspage.Show();
+            this.Hide();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            AdminStorePage adminstorepage = new AdminStorePage(userr);
+            adminstorepage.Show();
+            this.Hide();
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
-            EditProfilePage editprofilepage = new EditProfilePage(userr);
-            editprofilepage.Show();
+            AdminEditProfilePage admineditprofilepage = new AdminEditProfilePage(userr);
+            admineditprofilepage.Show();
             this.Hide();
         }
 
@@ -132,12 +145,7 @@ namespace BarberShop
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button11_Click(object sender, EventArgs e)
+        private void button10_Click(object sender, EventArgs e)
         {
             int id_user = userr.id;
             string id_wizyty = comboBox1.Text;
@@ -162,8 +170,8 @@ namespace BarberShop
                     }
 
                     conn.Close();
-                    MyVisitsPage myvisitspage = new MyVisitsPage(userr);
-                    myvisitspage.Show();
+                    AdminVisitsPage ddminvisitspage = new AdminVisitsPage(userr);
+                    ddminvisitspage.Show();
                     this.Hide();
                 }
             }

@@ -61,9 +61,18 @@ namespace BarberShop
                         string address = reader.GetString(6);
                         string date = reader.GetString(8);
                         user = new User(id, name, surname, email, login, password, phone, address, date);
-                        MainPage main = new MainPage(user);
-                        main.Show();
-                        this.Hide();
+                        if (login == "admin" && password == "admin")
+                        {
+                            AdminMainPage adminmainpage = new AdminMainPage(user);
+                            adminmainpage.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MainPage main = new MainPage(user);
+                            main.Show();
+                            this.Hide();
+                        }
                     }
                 }
                 else if (textBox1.TextLength == 0 || textBox2.TextLength == 0)

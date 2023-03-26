@@ -104,5 +104,10 @@ namespace BarberShop
         {
 
         }
+
+        private void nazwisko_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
