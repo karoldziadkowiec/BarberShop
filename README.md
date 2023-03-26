@@ -1,4 +1,5 @@
 # BarberShop
+The project presents a window application with an interface for handling and registering visits to the Barber Shop, it is also an example of using information technology to improve business processes. The application was created in C#. Thanks to such an application, the client of the hairdressing salon is able to manage their visits more easily, as well as learn the details of the salon.
 ![Register Page](https://github.com/karoldziadkowiec/BarberShop/blob/master/photos/1.png)
 ![Login Page](https://github.com/karoldziadkowiec/BarberShop/blob/master/photos/2.png)
 ![Main Page](https://github.com/karoldziadkowiec/BarberShop/blob/master/photos/3.png)
