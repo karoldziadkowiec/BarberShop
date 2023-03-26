@@ -9,7 +9,8 @@ Client's side:
 ![Create Visit Page](https://github.com/karoldziadkowiec/BarberShop/blob/master/photos/6.png)
 ![My visits Page](https://github.com/karoldziadkowiec/BarberShop/blob/master/photos/7.png)
 ![Edit Profile Page](https://github.com/karoldziadkowiec/BarberShop/blob/master/photos/8.png)
-Administrator's side:
+
+Administrator's side has been enhanced with more options:
 ![Visits Page](https://github.com/karoldziadkowiec/BarberShop/blob/master/photos/9.png)
 ![Clients Page](https://github.com/karoldziadkowiec/BarberShop/blob/master/photos/10.png)
 ![Store Page](https://github.com/karoldziadkowiec/BarberShop/blob/master/photos/11.png)
