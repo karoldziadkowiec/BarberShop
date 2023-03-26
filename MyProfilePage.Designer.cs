@@ -463,7 +463,7 @@
             this.Name = "MyProfilePage";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MyProfilePage";
+            this.Text = "BarberShop";
             this.Load += new System.EventHandler(this.MyProfilePage_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
