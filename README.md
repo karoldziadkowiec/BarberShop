@@ -13,7 +13,7 @@ Client's side:
 
 ![Create Visit Page](https://github.com/karoldziadkowiec/BarberShop/blob/master/photos/6.png)
 
-![My visits Page](https://github.com/karoldziadkowiec/BarberShop/blob/master/photos/7.png)
+![My visits Page](https://github.com/karoldziadkowiec/BarberShop/blob/master/photos/77.png)
 
 ![Edit Profile Page](https://github.com/karoldziadkowiec/BarberShop/blob/master/photos/8.png)
 
