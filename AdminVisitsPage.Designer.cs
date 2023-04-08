@@ -248,7 +248,7 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button10.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(914, 512);
+            this.button10.Location = new System.Drawing.Point(933, 524);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(135, 52);
             this.button10.TabIndex = 188;
@@ -259,7 +259,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel5.Location = new System.Drawing.Point(681, 493);
+            this.panel5.Location = new System.Drawing.Point(700, 505);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(155, 2);
             this.panel5.TabIndex = 187;
@@ -269,7 +269,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label5.Location = new System.Drawing.Point(677, 464);
+            this.label5.Location = new System.Drawing.Point(696, 476);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(181, 26);
             this.label5.TabIndex = 186;
@@ -279,7 +279,7 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(862, 461);
+            this.comboBox1.Location = new System.Drawing.Point(881, 473);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(187, 36);
             this.comboBox1.TabIndex = 185;
@@ -297,11 +297,11 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(363, 158);
+            this.dataGridView1.Location = new System.Drawing.Point(325, 158);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 35;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(686, 297);
+            this.dataGridView1.Size = new System.Drawing.Size(743, 297);
             this.dataGridView1.TabIndex = 184;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 

@@ -291,7 +291,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 35;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(334, 297);
+            this.dataGridView1.Size = new System.Drawing.Size(371, 297);
             this.dataGridView1.TabIndex = 52;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -300,7 +300,7 @@
             this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.textBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox1.Location = new System.Drawing.Point(730, 260);
+            this.textBox1.Location = new System.Drawing.Point(748, 260);
             this.textBox1.MaxLength = 30;
             this.textBox1.Name = "textBox1";
             this.textBox1.ShortcutsEnabled = false;
@@ -314,7 +314,7 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button11.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(870, 477);
+            this.button11.Location = new System.Drawing.Point(888, 477);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(135, 52);
             this.button11.TabIndex = 54;
@@ -326,7 +326,7 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(730, 335);
+            this.comboBox1.Location = new System.Drawing.Point(748, 335);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(275, 36);
             this.comboBox1.TabIndex = 55;
@@ -336,7 +336,7 @@
             // 
             this.comboBox2.Font = new System.Drawing.Font("Comic Sans MS", 12F);
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(730, 411);
+            this.comboBox2.Location = new System.Drawing.Point(748, 411);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(275, 36);
             this.comboBox2.TabIndex = 56;
@@ -344,7 +344,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel5.Location = new System.Drawing.Point(730, 252);
+            this.panel5.Location = new System.Drawing.Point(748, 252);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(105, 2);
             this.panel5.TabIndex = 58;
@@ -354,7 +354,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label5.Location = new System.Drawing.Point(726, 223);
+            this.label5.Location = new System.Drawing.Point(744, 223);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(133, 26);
             this.label5.TabIndex = 57;
@@ -363,7 +363,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel6.Location = new System.Drawing.Point(730, 327);
+            this.panel6.Location = new System.Drawing.Point(748, 327);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(72, 2);
             this.panel6.TabIndex = 60;
@@ -373,7 +373,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label1.Location = new System.Drawing.Point(726, 298);
+            this.label1.Location = new System.Drawing.Point(744, 298);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(133, 26);
             this.label1.TabIndex = 59;
@@ -382,7 +382,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Goldenrod;
-            this.panel7.Location = new System.Drawing.Point(730, 403);
+            this.panel7.Location = new System.Drawing.Point(748, 403);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(72, 2);
             this.panel7.TabIndex = 62;
@@ -392,7 +392,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label2.Location = new System.Drawing.Point(726, 374);
+            this.label2.Location = new System.Drawing.Point(744, 374);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 26);
             this.label2.TabIndex = 61;
