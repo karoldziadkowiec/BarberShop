@@ -271,6 +271,7 @@
             this.label2.Size = new System.Drawing.Size(133, 26);
             this.label2.TabIndex = 36;
             this.label2.Text = "E-mail";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // email
             // 
@@ -281,6 +282,7 @@
             this.email.Size = new System.Drawing.Size(229, 30);
             this.email.TabIndex = 35;
             this.email.Text = "e-mail";
+            this.email.Click += new System.EventHandler(this.email_Click);
             // 
             // login
             // 
@@ -292,6 +294,7 @@
             this.login.TabIndex = 38;
             this.login.Text = "login";
             this.login.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.login.Click += new System.EventHandler(this.login_Click);
             // 
             // panel9
             // 
@@ -301,6 +304,7 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(190, 2);
             this.panel9.TabIndex = 43;
+            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
             // label6
             // 
@@ -312,6 +316,7 @@
             this.label6.Size = new System.Drawing.Size(206, 26);
             this.label6.TabIndex = 42;
             this.label6.Text = "Numer telefonu";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // numer
             // 
@@ -322,6 +327,7 @@
             this.numer.Size = new System.Drawing.Size(227, 30);
             this.numer.TabIndex = 41;
             this.numer.Text = "numer telefonu";
+            this.numer.Click += new System.EventHandler(this.numer_Click);
             // 
             // panel10
             // 
@@ -342,6 +348,7 @@
             this.label7.Size = new System.Drawing.Size(133, 26);
             this.label7.TabIndex = 45;
             this.label7.Text = "Adres";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // adres
             // 
@@ -352,6 +359,7 @@
             this.adres.Size = new System.Drawing.Size(199, 30);
             this.adres.TabIndex = 44;
             this.adres.Text = "adres";
+            this.adres.Click += new System.EventHandler(this.adres_Click);
             // 
             // panel11
             // 
@@ -361,6 +369,7 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(180, 2);
             this.panel11.TabIndex = 49;
+            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
             // label8
             // 
@@ -372,6 +381,7 @@
             this.label8.Size = new System.Drawing.Size(198, 26);
             this.label8.TabIndex = 48;
             this.label8.Text = "Data urodzenia";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // data
             // 
@@ -382,6 +392,7 @@
             this.data.Size = new System.Drawing.Size(199, 30);
             this.data.TabIndex = 47;
             this.data.Text = "data urodzenia";
+            this.data.Click += new System.EventHandler(this.data_Click);
             // 
             // button10
             // 
@@ -405,6 +416,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(220, 2);
             this.panel8.TabIndex = 40;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // label4
             // 
@@ -416,6 +428,7 @@
             this.label4.Size = new System.Drawing.Size(235, 26);
             this.label4.TabIndex = 39;
             this.label4.Text = "Login użytkownika";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // nazwisko
             // 
