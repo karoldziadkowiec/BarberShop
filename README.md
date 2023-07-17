@@ -1,5 +1,5 @@
 # BarberShop
-The project presents a window application with an interface for handling and registering visits to the Barber Shop, it is also an example of using information technology to improve business processes. Thanks to such an application, the client of the hairdressing salon is able to manage their visits more easily, as well as learn the details of the salon. The application has two forms of use: from the customer's side and from the administrator's(barber's) side.
+The project presents a window application with an interface for handling and registering visits to the Barber Shop, it is also an example of using information technology to improve business processes. Thanks to such an application, the client of the hairdressing salon is able to manage their visits more easily, as well as learn the details of the salon. The application has two forms of use: from the customer's side and from the administrator's (barber's) side.
 
 Technologies used in the project: C#, .NET, MySQL.
 
