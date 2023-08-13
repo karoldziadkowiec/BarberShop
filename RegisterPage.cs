@@ -63,6 +63,7 @@ namespace BarberShop
             String phone = textBox8.Text;
             String address = textBox7.Text;
             String birthday = dateTimePicker1.Text;
+
             if (name.Length == 0 || surname.Length == 0 || email.Length == 0 || login.Length == 0 || password.Length == 0 || confirmPassword.Length == 0 || phone.Length == 0 || address.Length == 0 || birthday.Length == 0)
             {
                 MessageBox.Show("Uzupełnij puste pola.", "BarberShop");
@@ -98,6 +99,7 @@ namespace BarberShop
                 MessageBox.Show("Zaakceptuj warunki regulaminu.", "BarberShop");
                 return;
             }
+
             try
             {
                 string connectionString = "server=localhost;database=barbershop;username=root;password=;";
@@ -116,18 +118,10 @@ namespace BarberShop
                     command.Parameters.AddWithValue("@address", address);
                     command.Parameters.AddWithValue("@birthday", birthday);
                     command.ExecuteNonQuery();
-                    /*
-                    user = new User;
-                    user.name = name;
-                    user.surname = surname;
-                    user.email = email;
-                    user.login = login;
-                    user.password = password;
-                    user.phone = phone;
-                    user.address = address;*/
-                    //commandDatabase.ExecuteReader();
+
                     MessageBox.Show("Pomyślnie zarejestrowano konto.", "BarberShop");
                     conn.Close();
+
                     LoginPage loginpage = new LoginPage();
                     loginpage.Show();
                     this.Hide();

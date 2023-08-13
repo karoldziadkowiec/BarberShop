@@ -16,6 +16,7 @@ namespace BarberShop
         public MyProfilePage(User user)
         {
             InitializeComponent();
+
             imie.Text = user.name;
             nazwisko.Text = user.surname;
             email.Text = user.email;
@@ -24,6 +25,7 @@ namespace BarberShop
             data.Text = user.date;
             adres.Text = user.address;
             button9.Text = "Profil: " + user.login;
+
             userr = user;
         }
 

@@ -18,16 +18,17 @@ namespace BarberShop
         public AdminClientsPage(User user)
         {
             InitializeComponent();
+
             button9.Text = user.name;
             userr = user;
             int id_user = user.id;
             userr = user;
-            string connectionString = "server=localhost;database=barbershop;username=root;password=;";
 
+            string connectionString = "server=localhost;database=barbershop;username=root;password=;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
-
             MySqlCommand cmdDataBase = new MySqlCommand("SELECT id AS 'ID', name AS 'Imię', surname AS 'Nazwisko', phone AS 'Nr telefonu', address AS 'Adres', email AS 'E-mail', birthday AS 'Data urodzenia' FROM users WHERE id != '1' ORDER BY id ASC", connection);
+           
             try
             {
                 //DATAGRIDVIEW
@@ -35,7 +36,6 @@ namespace BarberShop
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView1.DataSource = dt;
-
             }
             catch (Exception ex)
             {
@@ -141,6 +141,7 @@ namespace BarberShop
             string connectionString = "server=localhost;database=barbershop;username=root;password=;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand cmdDataBase = new MySqlCommand("SELECT visits.id AS 'ID WIZYTY', visits.date AS 'DATA', barber.name AS 'BARBER', service.name AS 'USŁUGA' FROM visits, barber, service WHERE user= " + id_uzytkownik + " AND visits.barber = barber.id AND visits.service = service.id  ORDER BY date ASC", connection);
+            
             try
             {
                 connection.Open();

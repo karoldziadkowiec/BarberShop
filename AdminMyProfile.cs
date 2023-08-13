@@ -16,6 +16,7 @@ namespace BarberShop
         public AdminMyProfile(User user)
         {
             InitializeComponent();
+
             imie.Text = user.name;
             email.Text = user.email;
             login.Text = user.login;

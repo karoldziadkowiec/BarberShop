@@ -17,12 +17,15 @@ namespace BarberShop
         public AdminCreateVisitPage(User user)
         {
             InitializeComponent();
+
             button9.Text = user.name;
             userr = user;
+
             string connectionString = "server=localhost;database=barbershop;username=root;password=;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand cmdDataBase1 = new MySqlCommand("SELECT name FROM service", connection);
             MySqlCommand cmdDataBase2 = new MySqlCommand("SELECT name FROM barber", connection);
+
             try
             {
                 //DATAGRIDVIEW

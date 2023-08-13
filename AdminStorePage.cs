@@ -19,16 +19,17 @@ namespace BarberShop
         public AdminStorePage(User user)
         {
             InitializeComponent();
+
             button9.Text = user.name;
             userr = user;
             int id_user = user.id;
             userr = user;
-            string connectionString = "server=localhost;database=barbershop;username=root;password=;";
 
+            string connectionString = "server=localhost;database=barbershop;username=root;password=;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
-
             MySqlCommand cmdDataBase = new MySqlCommand("SELECT id AS 'ID', name AS 'Nazwa', amount AS 'Ilość', price AS 'Cena' FROM products ORDER BY id ASC", connection);
+            
             try
             {
                 //DATAGRIDVIEW
@@ -140,11 +141,13 @@ namespace BarberShop
         {
             string id = textBox1.Text;
             string amount = numericUpDown1.Text;
+
             if (id.Length == 0 || amount.Length == 0)
             {
                 MessageBox.Show("Wpisz poprawnie parametry.", "BarberShop");
                 return;
             }
+
             try
             {
                 string connectionString = "server=localhost;database=barbershop;username=root;password=;";
@@ -152,15 +155,19 @@ namespace BarberShop
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
+
                     string sqlQuery = "UPDATE products " +
                     "SET amount=amount+'" + amount + "' " +
                     "WHERE id=@id ";
+
                     MySqlCommand command = new MySqlCommand(sqlQuery, conn);
                     command.Parameters.AddWithValue("@amount", amount);
                     command.Parameters.AddWithValue("@id", id);
                     command.ExecuteNonQuery();
+
                     MessageBox.Show("Zwiększono ilość produktu w magazynie.", "BarberShop");
                     conn.Close();
+
                     AdminStorePage adminstorepage = new AdminStorePage(userr);
                     adminstorepage.Show();
                     this.Hide();
@@ -176,11 +183,13 @@ namespace BarberShop
         {
             string id = textBox1.Text;
             string amount = numericUpDown1.Text;
+
             if (id.Length == 0 || amount.Length == 0)
             {
                 MessageBox.Show("Wpisz poprawnie parametry.", "BarberShop");
                 return;
             }
+
             try
             {
                 string connectionString = "server=localhost;database=barbershop;username=root;password=;";
@@ -188,15 +197,19 @@ namespace BarberShop
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
+
                     string sqlQuery = "UPDATE products " +
                     "SET amount=amount-'" + amount + "' " +
                     "WHERE id=@id ";
+
                     MySqlCommand command = new MySqlCommand(sqlQuery, conn);
                     command.Parameters.AddWithValue("@amount", amount);
                     command.Parameters.AddWithValue("@id", id);
                     command.ExecuteNonQuery();
+
                     MessageBox.Show("Zmniejszono ilość produktu w magazynie.", "BarberShop");
                     conn.Close();
+
                     AdminStorePage adminstorepage = new AdminStorePage(userr);
                     adminstorepage.Show();
                     this.Hide();

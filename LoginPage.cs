@@ -22,6 +22,7 @@ namespace BarberShop
         {
             InitializeComponent();
         }
+
         MySqlConnection conn = new MySqlConnection("datasource=localhost;username=root;password=;database=barbershop");
 
         private void button7_Click(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace BarberShop
             string login, password;
             login = textBox1.Text;
             password = textBox2.Text;
-            //MySqlCommand command = conn.CreateCommand();
+
             MySqlCommand command = new MySqlCommand();
             
             try
@@ -47,6 +48,7 @@ namespace BarberShop
                 command.CommandText = querry;
                 command.Connection = conn;
                 MySqlDataReader reader = command.ExecuteReader();
+
                 if (reader.HasRows)
                 {
                     while (reader.Read())
@@ -60,7 +62,9 @@ namespace BarberShop
                         string phone = reader.GetString(5);
                         string address = reader.GetString(6);
                         string date = reader.GetString(8);
+
                         user = new User(id, name, surname, email, login, password, phone, address, date);
+
                         if (login == "admin" && password == "admin")
                         {
                             AdminMainPage adminmainpage = new AdminMainPage(user);

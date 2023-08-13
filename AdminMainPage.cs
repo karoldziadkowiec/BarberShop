@@ -16,6 +16,7 @@ namespace BarberShop
         public AdminMainPage(User user)
         {
             InitializeComponent();
+
             button9.Text = user.name;
             userr = user;
         }

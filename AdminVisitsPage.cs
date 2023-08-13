@@ -17,24 +17,27 @@ namespace BarberShop
         public AdminVisitsPage(User user)
         {
             InitializeComponent();
+
             button9.Text = user.name;
             userr = user;
             int id_user = user.id;
-            userr = user;
-            string connectionString = "server=localhost;database=barbershop;username=root;password=;";
 
+            userr = user;
+
+            string connectionString = "server=localhost;database=barbershop;username=root;password=;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             string sqlQueryGetUserId = "SELECT user FROM visits WHERE user='" + id_user + "'";
+
             MySqlCommand commandGetUserId = new MySqlCommand(sqlQueryGetUserId, connection);
             int UserId = Convert.ToInt32(commandGetUserId.ExecuteScalar());
 
             MySqlCommand cmdDataBase = new MySqlCommand("SELECT DISTINCT visits.id AS 'ID WIZYTY', visits.date AS 'DATA', users.surname AS 'KLIENT', barber.name AS 'BARBER', service.name AS 'USŁUGA' FROM visits, users, barber, service WHERE user IS NOT NULL AND visits.user = users.id AND visits.barber = barber.id AND visits.service = service.id ORDER BY date ASC", connection);
             MySqlCommand cmdDataBase1 = new MySqlCommand("SELECT id FROM visits WHERE user IS NOT NULL ORDER BY id ASC", connection);
+            
             try
             {
                 //DATAGRIDVIEW
-                //connection.Open();
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdDataBase);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
@@ -153,6 +156,7 @@ namespace BarberShop
             try
             {
                 string connectionString = "server=localhost;database=barbershop;username=root;password=;";
+
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
@@ -170,6 +174,7 @@ namespace BarberShop
                     }
 
                     conn.Close();
+
                     AdminVisitsPage ddminvisitspage = new AdminVisitsPage(userr);
                     ddminvisitspage.Show();
                     this.Hide();

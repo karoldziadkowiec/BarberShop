@@ -19,11 +19,13 @@ namespace BarberShop
         public MyVisitsPage(User user)
         {
             InitializeComponent();
+
             button9.Text = "Profil: " + user.login;
             int id_user = user.id;
-            userr = user;
-            string connectionString = "server=localhost;database=barbershop;username=root;password=;";
 
+            userr = user;
+
+            string connectionString = "server=localhost;database=barbershop;username=root;password=;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
             string sqlQueryGetUserId = "SELECT user FROM visits WHERE user='" + id_user + "'";
@@ -32,10 +34,10 @@ namespace BarberShop
 
             MySqlCommand cmdDataBase = new MySqlCommand("SELECT visits.id AS 'ID WIZYTY', visits.date AS 'DATA', barber.name AS 'BARBER', service.name AS 'USŁUGA' FROM visits, barber, service WHERE user= " + UserId + " AND visits.barber = barber.id AND visits.service = service.id  ORDER BY date ASC", connection);
             MySqlCommand cmdDataBase1 = new MySqlCommand("SELECT id FROM visits WHERE user= " + id_user + "  ORDER BY id ASC", connection);
+            
             try
             {
                 //DATAGRIDVIEW
-                //connection.Open();
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdDataBase);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
@@ -145,6 +147,7 @@ namespace BarberShop
             try
             {
                 string connectionString = "server=localhost;database=barbershop;username=root;password=;";
+
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
@@ -162,6 +165,7 @@ namespace BarberShop
                     }
 
                     conn.Close();
+
                     MyVisitsPage myvisitspage = new MyVisitsPage(userr);
                     myvisitspage.Show();
                     this.Hide();

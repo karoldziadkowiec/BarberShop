@@ -16,6 +16,7 @@ namespace BarberShop
         public ContactPage(User user)
         {
             InitializeComponent();
+
             button9.Text = "Profil: " + user.login;
             userr = user;
         }

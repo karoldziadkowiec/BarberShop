@@ -25,12 +25,15 @@ namespace BarberShop
         public CreateVisitPage(User user)
         {
             InitializeComponent();
+
             button9.Text = "Profil: " + user.login;
             userr = user;
+
             string connectionString = "server=localhost;database=barbershop;username=root;password=;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             MySqlCommand cmdDataBase1 = new MySqlCommand("SELECT name FROM service", connection);
             MySqlCommand cmdDataBase2 = new MySqlCommand("SELECT name FROM barber", connection);
+
             try
             {
                 //DATAGRIDVIEW
@@ -191,6 +194,7 @@ namespace BarberShop
             try
             {
                 string connectionString = "server=localhost;database=barbershop;username=root;password=;";
+
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();

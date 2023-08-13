@@ -21,6 +21,7 @@ namespace BarberShop
         public EditProfilePage(User user)
         {
             InitializeComponent();
+
             textBox1.Text = user.name;
             textBox2.Text = user.surname;
             textBox3.Text = user.email;
@@ -31,6 +32,7 @@ namespace BarberShop
             textBox7.Text = user.address;
             button9.Text = "Profil: " + user.login;
             login.Text = user.login;
+
             userr = user;
         }
 
@@ -142,13 +144,14 @@ namespace BarberShop
                 MessageBox.Show("Proszę wprowadzić poprawny e-mail.", "BarberShop");
                 return;
             }
+
             try
             {
                 string connectionString = "server=localhost;database=barbershop;username=root;password=;";
+
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
-
                     string sqlQuery = "UPDATE users SET name='" + textBox1.Text + "', surname='" + textBox2.Text + "', email='" + textBox3.Text + "', password='" + textBox4.Text + "', phone='" + textBox6.Text + "', address='" + textBox7.Text + "', birthday='" + dateTimePicker1.Text + "' WHERE login='" + login.Text + "';";
                     MySqlCommand command = new MySqlCommand(sqlQuery, conn);
                     command.ExecuteNonQuery();
@@ -163,6 +166,7 @@ namespace BarberShop
                     
                     MessageBox.Show("Pomyślnie poprawiono dane.", "BarberShop");
                     conn.Close();
+
                     EditProfilePage editprofilepage = new EditProfilePage(userr);
                     editprofilepage.Show();
                     this.Hide();
