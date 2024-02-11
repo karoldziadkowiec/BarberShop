@@ -4,6 +4,7 @@ The project presents a window application with an interface for handling and reg
 Technologies used in the project: 
 - **.NET Framework (Windows Forms)**
 - **C#**
+- **ADO.NET**
 - **MySQL**
 
 Features of the project: registering, logging in, editing the profile, booking a visit by choosing a date, barber and service, canceling a visit, viewing visits, viewing information about the salon, logging out. Administator's side has been enhanced with the following features: viewing customers data, warehouse management (adding and deleting products).
